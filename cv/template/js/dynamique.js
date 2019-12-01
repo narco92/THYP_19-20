@@ -63,9 +63,6 @@ function showDataEtu(dataEtu) {
     var nbAlea = d3.randomUniform(0, 100);
 
     function style(feature) {
-        //fillColor: colorScale(feature.properties.density),
-
-
         if (tableau.includes(feature.properties.name)) {
             return {
                 fillColor: colorScale(nbAlea()),
@@ -112,6 +109,123 @@ function showDataEtu(dataEtu) {
     mailEtu.selectAll(".row").remove();
     d3.select('#mail').html(dataEtu["Votre mail"]);
     ///////////////////////////////////////////////////////////////////////////////
+    //Langage///////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    let tabnomlanguage = ['Android', 'C#', 'C++', 'C', 'Java', 'Objectif C', 'PHP', 'cobol', 'javascript', 'python'];
+    let tablanguage = [];
+    tabnomlanguage.forEach(element => {
+        tablanguage.push(dataEtu['Quelles langages utilisez vous ? [' + element + ']']);
+    });
+    var ull = document.getElementById('CreateLangage');
+    while (ull.firstChild) {
+        ull.removeChild(ull.firstChild);
+    }
+    for (var i = 0; i < tablanguage.length; i++) {
+
+        var newLi = document.createElement('li');
+
+        var paragraphText = document.createTextNode(tabnomlanguage[i]);
+        var elementSpan = document.createElement('span');
+        switch (tablanguage[i]) {
+            case 'je connais un peu':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+                break;
+
+            case 'je connais bien':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+                break;
+            case 'je suis expert(e)':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+
+                break;
+            default:
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////
+    ///outils//////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    let tabnomframework = ['Jenkins', 'Hibernate', 'Bootstrap', 'laravel', 'Zend', 'Angular', 'Flesk', 'React', 'Vue', 'Symphony', 'Django', '.Net'];
+    let tabframework = [];
+    tabnomframework.forEach(element => {
+        tabframework.push(dataEtu['Quelles framework utilisez vous ? [' + element + ']']);
+    });
+    var ull = document.getElementById('CreateFramework');
+    while (ull.firstChild) {
+        ull.removeChild(ull.firstChild);
+    }
+    for (var i = 0; i < tabframework.length; i++) {
+
+        var newLi = document.createElement('li');
+
+        var paragraphText = document.createTextNode(tabnomframework[i]);
+        var elementSpan = document.createElement('span');
+        switch (tabframework[i]) {
+            case 'je connais un peu':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+                break;
+
+            case 'je connais bien':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+                break;
+            case 'je suis expert(e)':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+
+                break;
+            default:
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////
+    ////langues////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    let tabnomlangue = ['franÃ§ais', 'anglais', 'espagnol', 'arabe', 'tamazirth', 'chinois', 'russe'];
+    let tablangue = [];
+    tabnomlangue.forEach(element => {
+        tablangue.push(dataEtu['Quelles langues parlez vous ? [' + element + ']']);
+    });
+    var ull = document.getElementById('Createlangue');
+    while (ull.firstChild) {
+        ull.removeChild(ull.firstChild);
+    }
+    for (var i = 0; i < tabnomlangue.length; i++) {
+
+        var newLi = document.createElement('li');
+
+        var paragraphText = document.createTextNode(tabnomlangue[i]);
+        var elementSpan = document.createElement('span');
+        switch (tabframework[i]) {
+            case 'je connais un peu':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+                break;
+
+            case 'je connais bien':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+                break;
+            case 'je suis expert(e)':
+                newLi.appendChild(paragraphText);
+                ull.appendChild(newLi);
+                newLi.appendChild(elementSpan);
+
+                break;
+            default:
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
     let formsexiste = dataEtu["Votre formation précédente"];
@@ -144,11 +258,4 @@ function showDataEtu(dataEtu) {
         .on("click", function(d) {
             console.log(d);
         })
-        /*
-<div class="row">
-        <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-        <div class="col-sm-8">26</div>
-      </div>
-    */
-        //console.log(lignes);
 }
