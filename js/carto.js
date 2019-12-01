@@ -3,7 +3,7 @@ var map = L.map('mapid').setView([0, 0], 1);
 d3.csv(urlData)
     .then(function(data) {
         //selectioner etudiant 
-        data.forEach(element => {
+        data.forEach(ligne => {
             let prenom = ligne["Votre prénom"];
             if ((nom == 'Aghilas') && (prenom == 'NAIT MESSAOUD')) {
                 console.log("dd")
