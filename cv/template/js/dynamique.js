@@ -223,6 +223,7 @@ function showDataEtu(dataEtu) {
 
                 break;
             default:
+            console.log("oups");
         }
     }
     ///////////////////////////////////////////////////////////////////////////////
