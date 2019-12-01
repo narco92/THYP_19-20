@@ -51,14 +51,14 @@ function showDataEtu(dataEtu) {
             d > 1 ? '#FED976' :
             '#FFEDA0';
     }
-    var colorScale = d3.scaleSequential()
-        .domain([0, 100])
-        .interpolator(d3['interpolatePlasma']);
-    var nbAlea = d3.randomUniform(0, 100);
+    
 
     function style(feature) {
         //fillColor: colorScale(feature.properties.density),
-
+var colorScale = d3.scaleSequential()
+        .domain([0, 100])
+        .interpolator(d3['interpolatePlasma']);
+    var nbAlea = d3.randomUniform(0, 100);
 
         if (tableau.includes(feature.properties.name)) {
             return {
