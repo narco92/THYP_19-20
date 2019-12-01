@@ -5,6 +5,7 @@ d3.csv(urlData)
         //selectioner etudiant 
         data.forEach(ligne => {
             let prenom = ligne["Votre prénom"];
+            let nom = ligne["Votre nom"];
             if ((nom == 'Aghilas') && (prenom == 'NAIT MESSAOUD')) {
                 console.log("dd")
                 $("#listeEtu").append("<option selected>" + nom + " " + prenom + "</option>");
