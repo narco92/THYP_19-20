@@ -3,7 +3,7 @@
  <head>
   <title>Personal Dashboard</title>
   <type>Private</type>
-  <creationDate>2019-11-18 02:03:19</creationDate>
+  <creationDate>2019-12-01 04:16:25</creationDate>
  </head>
  <body>
   <outline title="Bienvenue" icon="home" iconColor="blue" cols="4" layout="4-1">
@@ -254,6 +254,7 @@
    <outline title="seriesTVnews" xmlUrl="https://api.netvibes.com/searches/?actions={&quot;searches&quot;:[{&quot;id&quot;:&quot;2a37d22e-f437-11e6-ad96-782bcb10ee8c&quot;,&quot;token&quot;:&quot;53964cbc06f79b25b4d15e5a8d1d4dc60ea938a8&quot;}]}&amp;format=atom" type="rss" row="6000" col="4"/>
   </outline>
   <outline title="Interest: &quot;Monde&quot;" icon="star" iconColor="green" cols="4" layout="4-1">
+   <outline title="Le Monde.fr : Médias" xmlUrl="https://www.lemonde.fr/actualite-medias/rss_full.xml" htmlUrl="https://www.lemonde.fr/actualite-medias/rss_full.xml" type="rss" row="1000" col="1"/>
    <outline type="SmartFilter" title="All &quot;Monde&quot; articles" row="2000" col="1">
     <outline title="All &quot;Monde&quot; articles" searchQuery="{&quot;topic&quot;:&quot;Monde&quot;}" searchToken="" view="mosaic" viewHeight="medium" color="" snapshot="[]"/>
    </outline>
@@ -353,6 +354,9 @@
   </outline>
   <outline title="comment çà marche " icon="rss" iconColor="green" cols="3" layout="3-0">
    <outline title="CommentCaMarche" xmlUrl="https://www.commentcamarche.net/rss/" htmlUrl="https://www.commentcamarche.net/news/" type="rss" row="1000" col="1"/>
+  </outline>
+  <outline title="BFM" icon="https://hightech.bfmtv.com/rss/application/" cols="4" layout="4-0">
+   <outline title="Application - high-tech" xmlUrl="https://hightech.bfmtv.com/rss/application/" htmlUrl="https://hightech.bfmtv.com/application/" type="rss" row="1000" col="2"/>
   </outline>
  </body>
 </opml>
