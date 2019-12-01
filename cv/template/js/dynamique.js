@@ -204,7 +204,7 @@ function showDataEtu(dataEtu) {
 
         var paragraphText = document.createTextNode(tabnomlangue[i]);
         var elementSpan = document.createElement('span');
-        switch (tabframework[i]) {
+        switch (tablangue[i]) {
             case 'je connais un peu':
                 newLi.appendChild(paragraphText);
                 ull.appendChild(newLi);
